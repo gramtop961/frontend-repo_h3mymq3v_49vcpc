@@ -2,14 +2,16 @@ import React from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import Features from './components/Features.jsx';
+import Testimonials from './components/Testimonials.jsx';
+import CTA from './components/CTA.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
   const navLinks = [
     { label: 'Overview', href: '#overview' },
     { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Testimonials', href: '#testimonials' },
+    { label: 'Get Started', href: '#get-started' },
   ];
 
   const footerLinks = [
@@ -26,11 +28,11 @@ export default function App() {
       <main>
         <section id="overview">
           <Hero
-            eyebrow="Composable by design"
-            title="A foundation that grows with your product"
-            subtitle="We split the page into focused, reusable sections. Add, remove, or reorder parts without touching the rest."
+            eyebrow="Playful. Vibrant. Extendable."
+            title="Build animated, modular pages without friction"
+            subtitle="A flexible section-based layout with rich motion. Swap parts, add features, and keep everything smooth and responsive."
             primary={{ label: 'Start Building', href: '#features' }}
-            secondary={{ label: 'See Features', href: '#features' }}
+            secondary={{ label: 'See it in action', href: '#testimonials' }}
           />
         </section>
 
@@ -38,8 +40,13 @@ export default function App() {
           <Features />
         </section>
 
-        {/* Example of how easily new sections can be added later:
-            <Testimonials /> or <CTA /> can slot in right here without refactoring */}
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+
+        <section id="get-started">
+          <CTA />
+        </section>
       </main>
 
       <Footer brand="Extendable UI" links={footerLinks} />
